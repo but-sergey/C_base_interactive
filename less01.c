@@ -6,10 +6,12 @@
 #include <stdio.h>
 
 int main(int args, const char** argv) {
+    // -- 1 --
     printf("Hello world\n");
-    printf("Введите целое число: ");
+    printf("Enter an integer value: ");
+    // -- 2 --
     int input;
     scanf("%d", &input);
-    printf("Число %d в квадрате равно %d\n", input, input*input);
+    printf("%d in a square is %d\n", input, input*input);
     return 0;
 }
