@@ -15,7 +15,7 @@ int main(int args, const char** argv) {
     printf("%d in a square is %d\n", input, input*input);
     // -- 4 --
     float Uo, Ui, R1, R2;
-    Ui = R1 / Uo / (R1 + R2);
+    Ui = Uo * (R1 + R2) / R1;
     R1 = R2 * Uo / (Ui - Uo);
     R2 = R1 * (Ui - Uo) / Uo;
 
