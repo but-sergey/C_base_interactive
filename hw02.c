@@ -34,18 +34,31 @@ int main (int argc, const char** argv)
     // printf("Среднее арифметическое введенных чисел: %f", avg);
 
     // --3--
-    do 
-    {
-        printf("Введите число от 0 до 1000 включительно: ");
-        scanf("%d", &number);
-    } while (number < 0 || number > 1000);
+    // do 
+    // {
+    //     printf("Введите число от 0 до 1000 включительно: ");
+    //     scanf("%d", &number);
+    // } while (number < 0 || number > 1000);
 
-    printf("Положительные четные числа от 0 до %d: 0", number);
-    for (int i = 2; i <= number; i += 2)
+    // printf("Положительные четные числа от 0 до %d: 0", number);
+    // for (int i = 2; i <= number; i += 2)
+    // {
+    //     printf(", %d", i);
+    // }
+    // printf(".\n");
+
+    // --4--
+    printf("Введите количество строк для треугольника: ");
+    scanf("%d", &number);
+    int line = 0;
+    for (int i = 0; i < number; i++)
     {
-        printf(", %d", i);
+        for (int j = 0; j < (number - i - 1); j++)
+            printf(" ");
+        for (int j = 0; j < ((i + 1) * 2 - 1); j++)
+            printf("^");
+        printf("\n");
     }
-    printf(".\n");
 
     return 0;
 }
