@@ -34,7 +34,18 @@ int main (int argc, const char** argv)
     // printf("Среднее арифметическое введенных чисел: %f", avg);
 
     // --3--
+    do 
+    {
+        printf("Введите число от 0 до 1000 включительно: ");
+        scanf("%d", &number);
+    } while (number < 0 || number > 1000);
 
+    printf("Положительные четные числа от 0 до %d: 0", number);
+    for (int i = 2; i <= number; i += 2)
+    {
+        printf(", %d", i);
+    }
+    printf(".\n");
 
     return 0;
 }
