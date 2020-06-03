@@ -4,12 +4,25 @@
 int main (int argc, const char** argv)
 {
     setlocale(LC_ALL, "Rus");
-    // --1--
+
     int number;
-    printf("Ââåäèòå öåëîå ÷èñëî: ");
-    scanf("%d", &number);
-    printf("×èñëî %d %síàõîäèòñÿ â äèàïàçîíå îò 0 äî 100 âêëş÷èòåëüíî\n",
-            number, (number >= 0 && number <= 100) ? "" : "íå ");
+
+    // --1--
+    // printf("Ââåäèòå öåëîå ÷èñëî: ");
+    // scanf("%d", &number);
+    // printf("×èñëî %d %síàõîäèòñÿ â äèàïàçîíå îò 0 äî 100 âêëş÷èòåëüíî\n",
+    //         number, (number >= 0 && number <= 100) ? "" : "íå ");
+
+    // --2--
+    float avg = 0.0;
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Ââåäèòå öåëîå ÷èñëî ¹%d: ", i);
+        scanf("%d", &number);
+        avg += number;
+    }
+    avg /= 10.0;
+    printf("Ñğåäíåå àğèôìåòè÷åñêîå ââåäåííûõ ÷èñåë: %f", avg);
 
     return 0;
 }
