@@ -4,6 +4,12 @@
 int main (int argc, const char** argv)
 {
     setlocale(LC_ALL, "Rus");
+    // --1--
+    int number;
+    printf("Ââåäèòå öåëîå ÷èñëî: ");
+    scanf("%d", &number);
+    printf("×èñëî %d %síàõîäèòñÿ â äèàïàçîíå îò 0 äî 100 âêëş÷èòåëüíî\n",
+            number, (number >= 0 && number <= 100) ? "" : "íå ");
 
     return 0;
 }
