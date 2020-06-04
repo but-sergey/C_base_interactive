@@ -15,6 +15,7 @@
 #define MIN_NUM 50
 #define MAX_NUM 100
 
+// --1--
 int calcSquareEq(int a, int b, int c, double* x1, double* x2)
 {
     double _x1, _x2;
@@ -40,7 +41,7 @@ int calcSquareEq(int a, int b, int c, double* x1, double* x2)
     }
 }
 
-
+// --2--
 void arrRandomInit(int* arr, int len)
 {
     int i;
@@ -75,6 +76,19 @@ void arrPrint(int* arr, int len)
     printf("%d.\n", arr[len - 1]);
 }
 
+// --3--
+void asShortPrint(unsigned int* arr, int len)
+{
+    unsigned short* pointer = arr;
+    int i;
+    printf("[");
+    for (i = 0; i < len * 2; i++)
+    {
+        printf("%d%s", *(pointer + i), (i == len * 2 - 1) ? "]\n" : ", ");
+    }
+}
+
+// --main--
 int main(int argc, const char** argv)
 {
     setlocale(LC_ALL, "Rus");
@@ -112,22 +126,27 @@ int main(int argc, const char** argv)
     // };
 
     // --2--
-    srand(time(NULL));
+    // srand(time(NULL));
 
-    int arr[ARRAY_LENGTH];
+    // int arr[ARRAY_LENGTH];
 
-    arrRandomInit(arr, ARRAY_LENGTH);
-    printf("Исходный массив: ");
-    arrPrint(arr, ARRAY_LENGTH);
+    // arrRandomInit(arr, ARRAY_LENGTH);
+    // printf("Исходный массив: ");
+    // arrPrint(arr, ARRAY_LENGTH);
 
-    if(arrDoubler(arr, ARRAY_LENGTH))
-    {
-        printf("Изменённый массив: ");
-        arrPrint(arr, ARRAY_LENGTH);
-    }
-    else
-    {
-        printf("Массив не изменён.\n");
-    }
+    // if(arrDoubler(arr, ARRAY_LENGTH))
+    // {
+    //     printf("Изменённый массив: ");
+    //     arrPrint(arr, ARRAY_LENGTH);
+    // }
+    // else
+    // {
+    //     printf("Массив не изменён.\n");
+    // }
+
+    // --3--
+    unsigned int arr[ARRAY_LENGTH] = {0, 1, 2, 3, 4, 65541, 65542, 65543, 65544, 65545};
+    asShortPrint(arr, ARRAY_LENGTH);
+
     return 0;
 }
