@@ -23,17 +23,43 @@ void decToBin(int num, char* result)
     strcpy(result, out);
 }
 
+// --2--
+struct rectangle
+{
+    int height;
+    int width;
+    int area;
+    int perimeter;
+};
+typedef struct rectangle Rectangle;
+
+void calcRectangle(Rectangle* rect)
+{
+    rect->area = rect->height * rect->width;
+    rect->perimeter = 2 * (rect->height + rect->width);
+}
+
+// =====================================
 int main(int argc, const char** argv)
 {
     setlocale(LC_ALL, "Rus");
 
     // --1--
-    int num;
-    char binary[64];
-    printf("¬ведите целое число: ");
-    scanf("%d", &num);
-    decToBin(num, binary);
-    printf("„исло %d в двоичной системе равно %s", num, binary);
+    // int num;
+    // char binary[64];
+    // printf("¬ведите целое число: ");
+    // scanf("%d", &num);
+    // decToBin(num, binary);
+    // printf("„исло %d в двоичной системе равно %s", num, binary);
+
+    // --2--
+    Rectangle rect;
+    printf("¬ведите высоту пр€моугольника: ");
+    scanf("%d", &rect.height);
+    printf("¬ведите ширину пр€моугольника: ");
+    scanf("%d", &rect.width);
+    calcRectangle(&rect);
+    printf("ѕериметр пр€моугольника равен %d, а площадь равна %d\n", rect.perimeter, rect.area);
 
     return 0;
 }
